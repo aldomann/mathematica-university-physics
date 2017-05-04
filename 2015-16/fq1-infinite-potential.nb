@@ -1,0 +1,137 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3846,        128]
+NotebookOptionsPosition[      3289,        102]
+NotebookOutlinePosition[      3628,        117]
+CellTagsIndexPosition[      3585,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Infinite potential", "Title",
+ CellChangeTimes->{{3.661331537136547*^9, 3.6613315404141207`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Eigenfunctions", "Section",
+ CellChangeTimes->{{3.6613319532085857`*^9, 3.661331955132847*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Phi]", "[", 
+   RowBox[{"L_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sqrt", "[", 
+     FractionBox["2", "L"], "]"}], "*", 
+    RowBox[{"Cos", "[", 
+     FractionBox[
+      RowBox[{"n", "*", "x", "*", "Pi"}], "L"], "]"}]}], "/;", 
+   RowBox[{"OddQ", "[", "n", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Phi]", "[", 
+   RowBox[{"L_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sqrt", "[", 
+     FractionBox["2", "L"], "]"}], "*", 
+    RowBox[{"Sin", "[", 
+     FractionBox[
+      RowBox[{"n", "*", "x", "*", "Pi"}], "L"], "]"}]}], "/;", 
+   RowBox[{"EvenQ", "[", "n", "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.661330350494492*^9, 3.6613303974557333`*^9}, {
+  3.6613304517800694`*^9, 3.661330462701131*^9}, {3.6613305049756393`*^9, 
+  3.661330577151667*^9}, {3.661330689988233*^9, 3.6613307005396767`*^9}, {
+  3.661330736673259*^9, 3.661330808471999*^9}, {3.661330872404114*^9, 
+  3.661330938490778*^9}, {3.661330982503684*^9, 3.661330986074849*^9}, {
+  3.661331450497685*^9, 3.661331476325996*^9}, {3.661331620650342*^9, 
+  3.661331647149745*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Projections", "Section",
+ CellChangeTimes->{{3.6613316792350683`*^9, 3.661331685795472*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Phi]", "[", 
+     RowBox[{"L", ",", "3"}], "]"}], "*", 
+    RowBox[{"\[Phi]", "[", 
+     RowBox[{
+      RowBox[{"2", "L"}], ",", "1"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{
+      RowBox[{"-", "L"}], "/", "2"}], ",", 
+     RowBox[{"L", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6613308169366817`*^9, 3.661330818555317*^9}, {
+  3.661330942677266*^9, 3.661331022733787*^9}, {3.661331108989109*^9, 
+  3.661331119382635*^9}, {3.6613313107112913`*^9, 3.661331343012208*^9}, {
+  3.6613314832098923`*^9, 3.661331497078281*^9}, {3.661331652270053*^9, 
+  3.661331687617453*^9}, {3.66133199216737*^9, 3.661331992266829*^9}, {
+  3.6613320324750023`*^9, 3.661332032650147*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox["24", 
+   RowBox[{"35", " ", "\[Pi]"}]]}]], "Output",
+ CellChangeTimes->{
+  3.6613311378183613`*^9, {3.661331318704749*^9, 3.66133134410802*^9}, {
+   3.661331494678966*^9, 3.661331497607286*^9}, {3.661331650165724*^9, 
+   3.661331688139052*^9}, 3.661331993686166*^9, 3.6613320332828074`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 906},
+WindowMargins->{{Automatic, 544}, {38, Automatic}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (September 9, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 103, 1, 93, "Title"],
+Cell[CellGroupData[{
+Cell[708, 27, 101, 1, 65, "Section"],
+Cell[812, 30, 1144, 29, 110, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1993, 64, 98, 1, 65, "Section"],
+Cell[CellGroupData[{
+Cell[2116, 69, 796, 19, 30, "Input"],
+Cell[2915, 90, 334, 7, 50, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

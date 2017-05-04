@@ -1,0 +1,192 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5244,        183]
+NotebookOptionsPosition[      4641,        157]
+NotebookOutlinePosition[      4980,        172]
+CellTagsIndexPosition[      4937,        169]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Schr\[ODoubleDot]dinger-Von Neumann Equation", "Title",
+ CellChangeTimes->{{3.6553668937134743`*^9, 3.65536690282169*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"H", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0", ",", 
+      RowBox[{
+       RowBox[{"-", "\[CapitalOmega]"}], "/", "2"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "\[CapitalOmega]"}], "/", "2"}], ",", "\[CapitalDelta]"}],
+      "}"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[Rho]", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\[Rho]11", ",", "\[Rho]12"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Rho]21", ",", "\[Rho]22"}], "}"}]}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.6553669091833687`*^9, 3.655366969424127*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", 
+      FractionBox["\[CapitalOmega]", "2"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[CapitalOmega]", "2"]}], ",", "\[CapitalDelta]"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6553669703374453`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[Rho]11", ",", "\[Rho]12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Rho]21", ",", "\[Rho]22"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.655366970337985*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D\[Rho]", "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{
+    RowBox[{"-", "I"}], "*", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Dot", "[", 
+       RowBox[{"H", ",", "\[Rho]"}], "]"}], "-", 
+      RowBox[{"Dot", "[", 
+       RowBox[{"\[Rho]", ",", "H"}], "]"}]}], ")"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.655366972644187*^9, 3.655367040392372*^9}, {
+  3.6553670801865273`*^9, 3.65536708325313*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "2"]}], " ", "\[ImaginaryI]", " ", 
+      RowBox[{"(", 
+       RowBox[{"\[Rho]12", "-", "\[Rho]21"}], ")"}], " ", "\[CapitalOmega]"}],
+      ",", 
+     RowBox[{
+      FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", "\[CapitalDelta]", " ", "\[Rho]12"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "\[Rho]11"}], "+", "\[Rho]22"}], ")"}], " ", 
+         "\[CapitalOmega]"}]}], ")"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "2"]}], " ", "\[ImaginaryI]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", "\[CapitalDelta]", " ", "\[Rho]21"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "\[Rho]11"}], "+", "\[Rho]22"}], ")"}], " ", 
+         "\[CapitalOmega]"}]}], ")"}]}], ",", 
+     RowBox[{
+      FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+      RowBox[{"(", 
+       RowBox[{"\[Rho]12", "-", "\[Rho]21"}], ")"}], " ", 
+      "\[CapitalOmega]"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6553670412961693`*^9, 3.6553670836688023`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"D\[Rho]11", ":=", 
+  RowBox[{"I", " ", 
+   RowBox[{"(", 
+    RowBox[{"\[Rho]21", "-", "\[Rho]12"}], ")"}], " ", 
+   RowBox[{"\[CapitalOmega]", "/", "2"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"D\[Rho]22", ":=", 
+  RowBox[{"I", " ", 
+   RowBox[{"(", 
+    RowBox[{"\[Rho]12", "-", "\[Rho]21"}], ")"}], " ", 
+   RowBox[{"\[CapitalOmega]", "/", "2"}]}]}]}], "Input",
+ CellChangeTimes->{{3.655367238227762*^9, 3.655367300585333*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D\[Rho]12", ":=", 
+  RowBox[{"I", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[CapitalDelta]", " ", "\[Rho]12"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"\[Rho]22", "-", "\[Rho]11"}], ")"}], " ", 
+      RowBox[{"\[CapitalOmega]", "/", "2"}]}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.655367304283326*^9, 3.6553673352426443`*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 906},
+WindowMargins->{{546, Automatic}, {Automatic, 10}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (September 9, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 128, 1, 93, "Title"],
+Cell[CellGroupData[{
+Cell[733, 27, 648, 20, 46, "Input"],
+Cell[1384, 49, 354, 12, 51, "Output"],
+Cell[1741, 63, 241, 7, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2019, 75, 435, 12, 30, "Input"],
+Cell[2457, 89, 1316, 39, 92, "Output"]
+}, Open  ]],
+Cell[3788, 131, 453, 11, 46, "Input"],
+Cell[4244, 144, 381, 10, 28, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

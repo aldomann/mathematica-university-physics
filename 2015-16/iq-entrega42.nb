@@ -1,0 +1,168 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5239,        159]
+NotebookOptionsPosition[      4529,        129]
+NotebookOutlinePosition[      4869,        144]
+CellTagsIndexPosition[      4826,        141]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Entrega 4", "Title",
+ CellChangeTimes->{{3.6740452785669394`*^9, 3.674045283368785*^9}, {
+  3.6741314140777817`*^9, 3.6741314156322193`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problema 2", "Section",
+ CellChangeTimes->{{3.6741314181298227`*^9, 3.6741314200155687`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Pmat", ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "-", "\[Epsilon]"}], ",", "\[Epsilon]"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Epsilon]", ",", 
+      RowBox[{"1", "-", "\[Epsilon]"}]}], "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.674131439444426*^9, 3.6741314630049133`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Slider", "[", 
+    RowBox[{
+     RowBox[{"Dynamic", "[", "\[Epsilon]", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "0.05"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Dynamic", "[", "\[Epsilon]", "]"}]}], 
+  "}"}], "\[IndentingNewLine]", 
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Slider", "[", 
+    RowBox[{
+     RowBox[{"Dynamic", "[", "n", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "25", ",", "1"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Dynamic", "[", "n", "]"}]}], "}"}], "\[IndentingNewLine]", 
+ RowBox[{"Pmatn", ":=", 
+  RowBox[{"Pmat", "^", "n"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Dynamic", "[", 
+  RowBox[{"MatrixForm", "[", "Pmatn", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Dynamic", "[", 
+  RowBox[{"Dot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "0"}], "}"}], ",", "Pmatn"}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.674131464716675*^9, 3.674131470803257*^9}, {
+  3.674131525296216*^9, 3.674131594871316*^9}, {3.6741317290095377`*^9, 
+  3.674131738324247*^9}, {3.674131834763855*^9, 3.674131994412484*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SliderBox[Dynamic[$CellContext`\[Epsilon]], {0, 1, 0.05}], ",", 
+   DynamicBox[ToBoxes[$CellContext`\[Epsilon], StandardForm],
+    ImageSizeCache->{24., {0., 9.}}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6741314678241043`*^9, 3.674131471230888*^9}, {
+   3.674131529973568*^9, 3.674131536928637*^9}, {3.674131574691938*^9, 
+   3.674131595181075*^9}, {3.674131668024012*^9, 3.674131738688677*^9}, 
+   3.674131835978088*^9, {3.6741318828104277`*^9, 3.674131994832335*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SliderBox[Dynamic[$CellContext`n], {1, 25, 1}], ",", 
+   DynamicBox[ToBoxes[$CellContext`n, StandardForm],
+    ImageSizeCache->{9., {0., 10.}}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6741314678241043`*^9, 3.674131471230888*^9}, {
+   3.674131529973568*^9, 3.674131536928637*^9}, {3.674131574691938*^9, 
+   3.674131595181075*^9}, {3.674131668024012*^9, 3.674131738688677*^9}, 
+   3.674131835978088*^9, {3.6741318828104277`*^9, 3.674131994834363*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   MatrixForm[$CellContext`Pmatn], StandardForm],
+  ImageSizeCache->{79., {12., 19.}}]], "Output",
+ CellChangeTimes->{{3.6741314678241043`*^9, 3.674131471230888*^9}, {
+   3.674131529973568*^9, 3.674131536928637*^9}, {3.674131574691938*^9, 
+   3.674131595181075*^9}, {3.674131668024012*^9, 3.674131738688677*^9}, 
+   3.674131835978088*^9, {3.6741318828104277`*^9, 3.674131994836054*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   Dot[{1, 0}, $CellContext`Pmatn], StandardForm],
+  ImageSizeCache->{77., {3., 9.}}]], "Output",
+ CellChangeTimes->{{3.6741314678241043`*^9, 3.674131471230888*^9}, {
+   3.674131529973568*^9, 3.674131536928637*^9}, {3.674131574691938*^9, 
+   3.674131595181075*^9}, {3.674131668024012*^9, 3.674131738688677*^9}, 
+   3.674131835978088*^9, {3.6741318828104277`*^9, 3.674131994837349*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Tr", "[", "Pmat", "]"}]], "Input",
+ CellChangeTimes->{{3.674131797663396*^9, 3.674131828103264*^9}}],
+
+Cell[BoxData["1.`"], "Output",
+ CellChangeTimes->{{3.6741318218709097`*^9, 3.674131828837281*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{960, 1025},
+WindowMargins->{{-10, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (September 9, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 147, 2, 93, "Title"],
+Cell[CellGroupData[{
+Cell[752, 28, 99, 1, 65, "Section"],
+Cell[854, 31, 360, 10, 28, "Input"],
+Cell[CellGroupData[{
+Cell[1239, 45, 1125, 29, 102, "Input"],
+Cell[2367, 76, 515, 9, 37, "Output"],
+Cell[2885, 87, 495, 9, 37, "Output"],
+Cell[3383, 98, 421, 7, 48, "Output"],
+Cell[3807, 107, 420, 7, 61, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4264, 119, 124, 2, 28, "Input"],
+Cell[4391, 123, 98, 1, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
